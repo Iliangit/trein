@@ -1,0 +1,358 @@
+.reviews {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: "DejaVu Sans Mono", monospace;
+}
+
+.reviews h2 {
+    text-align: center;
+    color: #3E2723;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: normal;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.reviews h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #A52A2A;
+    border-radius: 2px;
+}
+
+.reviews h3 {
+    color: #3E2723;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+
+.block-show-reviews {
+    background: #FFFBF5;
+    border: 4px solid #A52A2A;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(165, 42, 42, 0.1);
+    min-height: 200px;
+}
+
+.comment {
+    background: rgba(255, 251, 245, 0.8);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid rgba(165, 42, 42, 0.3);
+    box-shadow: 0 2px 8px rgba(62, 39, 35, 0.1);
+    position: relative;
+}
+
+.comment:hover {
+    border-color: rgba(165, 42, 42, 0.5);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(165, 42, 42, 0.2);
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #3E2723;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.comment-date {
+    color: #8B4513;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.comment-text {
+    color: #3E2723;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    padding: 10px 0;
+}
+
+.comment-actions {
+    text-align: right;
+    padding-top: 15px;
+    border-top: 1px solid rgba(165, 42, 42, 0.1);
+}
+
+.input-review {
+    background: #FFFBF5;
+    border: 4px solid #A52A2A;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(165, 42, 42, 0.15);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-name,
+.input-review-text {
+    padding: 18px 20px;
+    border: 2px solid #A52A2A;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-family: "DejaVu Sans Mono", monospace;
+    background: rgba(255, 251, 245, 0.9);
+    color: #3E2723;
+}
+
+.input-name::placeholder,
+.input-review-text::placeholder {
+    color: #8B4513;
+    opacity: 0.7;
+}
+
+.input-name:focus,
+.input-review-text:focus {
+    outline: none;
+    border-color: #8B4513;
+    background: #FFFBF5;
+}
+
+.input-review-text {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.5;
+}
+
+.submit {
+    background: #A52A2A;
+    color: #FFFBF5;
+    padding: 18px 40px;
+    border: 2px solid #8B4513;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: "DejaVu Sans Mono", monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #8B4513;
+}
+
+.delete-btn {
+    background: #A52A2A;
+    color: #FFFBF5;
+    border: 2px solid #8B4513;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: "DejaVu Sans Mono", monospace;
+    font-style: italic;
+}
+
+.delete-btn:hover {
+    background: #8B4513;
+}
+
+.message {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 2px solid transparent;
+    font-family: "DejaVu Sans Mono", monospace;
+}
+
+.message.success {
+    background: rgba(76, 175, 80, 0.1);
+    color: #2E7D32;
+    border-color: #4CAF50;
+}
+
+.message.error {
+    background: rgba(244, 67, 54, 0.1);
+    color: #C62828;
+    border-color: #F44336;
+}
+
+.no-comments {
+    text-align: center;
+    color: #8B4513;
+    padding: 60px 20px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.no-comments p {
+    margin: 0;
+    padding: 20px;
+    border: 2px dashed #A52A2A;
+    border-radius: 8px;
+    background: rgba(255, 251, 245, 0.5);
+}
+
+/* (768px и выше) */
+@media (min-width: 768px) {
+    .reviews h2 {
+        font-size: 2.8rem;
+    }
+
+    .reviews h3 {
+        font-size: 2.2rem;
+    }
+
+    .comment-author {
+        font-size: 1.6rem;
+    }
+
+    .comment-text {
+        font-size: 1.4rem;
+    }
+
+    .input-name,
+    .input-review-text {
+        font-size: 1.4rem;
+        padding: 20px 25px;
+    }
+
+    .submit {
+        font-size: 1.6rem;
+        padding: 20px 45px;
+    }
+
+    .delete-btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .message {
+        font-size: 1.4rem;
+        padding: 25px;
+    }
+
+    .no-comments {
+        font-size: 1.6rem;
+    }
+}
+
+/* (1024px и выше) */
+@media (min-width: 1024px) {
+    .reviews {
+        padding: 0 40px;
+    }
+
+    .reviews h2 {
+        font-size: 3.2rem;
+    }
+
+    .reviews h3 {
+        font-size: 2.5rem;
+    }
+
+    .block-show-reviews {
+        padding: 40px;
+    }
+
+    .comment {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .comment-author {
+        font-size: 1.8rem;
+    }
+
+    .comment-date {
+        font-size: 1.3rem;
+    }
+
+    .comment-text {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .input-review {
+        padding: 50px;
+    }
+
+    .form {
+        gap: 30px;
+    }
+
+    .input-name,
+    .input-review-text {
+        font-size: 1.5rem;
+        padding: 22px 30px;
+    }
+
+    .input-review-text {
+        min-height: 180px;
+    }
+
+    .submit {
+        font-size: 1.8rem;
+        padding: 22px 50px;
+        align-self: center;
+        min-width: 300px;
+    }
+
+    .delete-btn {
+        font-size: 1.3rem;
+        padding: 15px 35px;
+    }
+
+    .message {
+        font-size: 1.5rem;
+        padding: 30px;
+    }
+
+    .no-comments {
+        font-size: 1.8rem;
+        padding: 80px 40px;
+    }
+}
+
+/*(1200px и выше) */
+@media (min-width: 1200px) {
+    .reviews {
+        max-width: 1400px;
+    }
+
+    .block-show-reviews {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .comment {
+        margin-bottom: 0;
+    }
+
+    .comment:nth-child(odd) { /*не четный*/
+        border-left: 4px solid #A52A2A;
+    }
+
+    .comment:nth-child(even) { /*каждый второй*/
+        border-right: 4px solid #A52A2A;
+    }
+}
