@@ -41,6 +41,7 @@ async def read_new_index():
     return FileResponse("static/reviews.html")
 @app.get("/new_reviewss")
 async def second_read_new_index():
+    print("Привет")
     return FileResponse("static/index.html")
 
 @app.get("/get_reviews")
