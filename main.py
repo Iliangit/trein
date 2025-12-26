@@ -39,9 +39,9 @@ async def read_index():
 @app.get("/new_reviews")
 async def read_new_index():
     return FileResponse("static/reviews.html")
-@app.get("/new_reviews")
+@app.get("/new_reviewss")
 async def second_read_new_index():
-    return FileResponse("static/reviews.html")
+    return FileResponse("static/index.html")
 
 @app.get("/get_reviews")
 def get_comments():
