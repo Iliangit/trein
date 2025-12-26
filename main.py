@@ -39,7 +39,7 @@ async def read_index():
 @app.get("/new_reviews")
 async def read_new_index():
     return FileResponse("static/reviews.html")
-@app.get("/new_reviewss")
+@app.get("/new_reviewssew")
 async def second_read_new_index():
     print("Привет")
     return FileResponse("static/index.html")
