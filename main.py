@@ -36,6 +36,10 @@ async def read_index():
 async def read_index():
     return FileResponse("static/reviews.html")
 
+@app.get("/new_reviews")
+async def read_index():
+    return FileResponse("static/reviews.html")
+
 @app.get("/get_reviews")
 def get_comments():
     conn = get_db()
