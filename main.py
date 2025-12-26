@@ -1,3 +1,4 @@
+print('Hello from master')
 import sqlite3
 import uvicorn
 from fastapi import FastAPI, Form
