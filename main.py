@@ -1,4 +1,5 @@
 print('Hello from master and flomaster')
+"""СУпер новый дизайн"""
 import sqlite3
 import uvicorn
 from fastapi import FastAPI, Form
