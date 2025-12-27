@@ -1,4 +1,4 @@
-print('Hello from master')
+print('Hello from master and flomaster')
 import sqlite3
 import uvicorn
 from fastapi import FastAPI, Form
