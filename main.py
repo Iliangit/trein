@@ -1,4 +1,4 @@
-print(123123)
+print(123)
 import sqlite3
 import uvicorn
 from fastapi import FastAPI, Form
